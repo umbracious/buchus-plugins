@@ -278,6 +278,8 @@ public class WeaponMap
 		StyleMap.put(ItemID.DRAGON_WARHAMMER_20785, WeaponStyle.MELEE);
 		StyleMap.put(ItemID.DRAGON_WARHAMMER_CR, WeaponStyle.MELEE);
 		StyleMap.put(ItemID.DRAGON_WARHAMMER_OR, WeaponStyle.MELEE);
+		StyleMap.put(ItemID.DUAL_MACUAHUITL, WeaponStyle.MELEE);
+		StyleMap.put(ItemID.DUAL_SAI, WeaponStyle.MELEE);
 		StyleMap.put(ItemID.EASTER_BASKET, WeaponStyle.MELEE);
 		StyleMap.put(ItemID.EGG_WHISK, WeaponStyle.MELEE);
 		StyleMap.put(ItemID.ELDER_MAUL, WeaponStyle.MELEE);
@@ -743,6 +745,7 @@ public class WeaponMap
 		StyleMap.put(ItemID.DRAGON_KNIFEP_22808, WeaponStyle.RANGE);
 		StyleMap.put(ItemID.DRAGON_KNIFEP_22810, WeaponStyle.RANGE);
 		StyleMap.put(ItemID.DRAGON_THROWNAXE, WeaponStyle.RANGE);
+		StyleMap.put(ItemID.ECLIPSE_ATLATL, WeaponStyle.RANGE);
 		StyleMap.put(ItemID.HEAVY_BALLISTA, WeaponStyle.RANGE);
 		StyleMap.put(ItemID.HEAVY_BALLISTA_23630, WeaponStyle.RANGE);
 		StyleMap.put(ItemID.HEAVY_BALLISTA_OR, WeaponStyle.RANGE);
@@ -830,6 +833,7 @@ public class WeaponMap
 		StyleMap.put(ItemID.STEEL_KNIFEP_5656, WeaponStyle.RANGE);
 		StyleMap.put(ItemID.STEEL_KNIFEP_5663, WeaponStyle.RANGE);
 		StyleMap.put(ItemID.STEEL_THROWNAXE, WeaponStyle.RANGE);
+		StyleMap.put(ItemID.TONALZTICS_OF_RALOS, WeaponStyle.RANGE);
 		StyleMap.put(ItemID.TOKTZXILUL, WeaponStyle.RANGE);
 		StyleMap.put(ItemID.TOXIC_BLOWPIPE, WeaponStyle.RANGE);
 		StyleMap.put(ItemID.TOXIC_BLOWPIPE_EMPTY, WeaponStyle.RANGE);
@@ -875,6 +879,7 @@ public class WeaponMap
 		StyleMap.put(ItemID.BLOOD_ANCIENT_SCEPTRE, WeaponStyle.MAGIC);
 		StyleMap.put(ItemID.BLOOD_ANCIENT_SCEPTRE_28260, WeaponStyle.MAGIC);
 		StyleMap.put(ItemID.BLOOD_ANCIENT_SCEPTRE_L, WeaponStyle.MAGIC);
+		StyleMap.put(ItemID.BLUE_MOON_SPEAR, WeaponStyle.MAGIC);
 		StyleMap.put(ItemID.ICE_ANCIENT_SCEPTRE, WeaponStyle.MAGIC);
 		StyleMap.put(ItemID.ICE_ANCIENT_SCEPTRE_28262, WeaponStyle.MAGIC);
 		StyleMap.put(ItemID.ICE_ANCIENT_SCEPTRE_L, WeaponStyle.MAGIC);

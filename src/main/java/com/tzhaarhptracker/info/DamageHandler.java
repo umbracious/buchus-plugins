@@ -656,7 +656,7 @@ public class DamageHandler extends InfoHandler
 		List<TzhaarNPC> clump = new ArrayList<>();
 		for (TzhaarNPC n : plugin.getNpcs())
 		{
-			if (!n.isDead() && n.getNpc().getWorldLocation().distanceTo(target.getNpc().getWorldLocation()) <= 1)
+			if (!n.isDead() && n.getNpc().getId() != ROCKY_SUPPORT && n.getNpc().getWorldLocation().distanceTo(target.getNpc().getWorldLocation()) <= 1)
 			{
 				clump.add(n);
 			}
