@@ -758,9 +758,9 @@ public class BetterNpcHighlightOverlay extends Overlay
 		graphics.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_OFF);
 		Model model = actor.getModel();
 		int vCount = model.getVerticesCount();
-		int[] x3d = model.getVerticesX();
-		int[] y3d = model.getVerticesY();
-		int[] z3d = model.getVerticesZ();
+		float[] x3d = model.getVerticesX();
+		float[] y3d = model.getVerticesY();
+		float[] z3d = model.getVerticesZ();
 
 		int[] x2d = new int[vCount];
 		int[] y2d = new int[vCount];
