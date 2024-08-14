@@ -36,6 +36,7 @@ import javax.swing.JOptionPane;
 import javax.swing.UIManager;
 import lombok.extern.slf4j.Slf4j;
 import net.runelite.api.*;
+import net.runelite.api.Menu;
 import net.runelite.api.coords.WorldPoint;
 import net.runelite.api.events.*;
 import net.runelite.api.vars.InputType;
@@ -589,7 +590,7 @@ public class BetterNpcHighlightPlugin extends Plugin implements KeyListener
 							.setIdentifier(event.getIdentifier())
 							.setParam0(event.getActionParam0())
 							.setParam1(event.getActionParam1())
-							.setType(config.presetColorAmount() == BetterNpcHighlightConfig.presetColorAmount.ZERO ? MenuAction.RUNELITE : MenuAction.RUNELITE_SUBMENU)
+							.setType(MenuAction.RUNELITE)
 							.onClick(this::tagNPC);
 
 						if (parent != null)
@@ -604,8 +605,7 @@ public class BetterNpcHighlightPlugin extends Plugin implements KeyListener
 
 	public void tagNPC(MenuEntry event)
 	{
-		//Submenu if there are more than 1 preset colors selected, RuneLite if no preset colors
-		if (event.getType() == MenuAction.RUNELITE_SUBMENU || event.getType() == MenuAction.RUNELITE)
+		if (event.getType() == MenuAction.RUNELITE)
 		{
 			if ((event.getOption().contains("Tag") || event.getOption().contains("Untag")) && (event.getOption().contains("-Tile")
 				|| event.getOption().contains("-True-Tile") || event.getOption().contains("-SW-Tile") || event.getOption().contains("-SW-True-Tile")
@@ -626,6 +626,7 @@ public class BetterNpcHighlightPlugin extends Plugin implements KeyListener
 	private void customColorTag(int idx, NPC npc, MenuEntry parent)
 	{
 		List<Color> colors = new ArrayList<>();
+		Menu submenu = parent.createSubMenu();
 		// add X amount of preset colors based off of config
 		if (config.presetColorAmount() != BetterNpcHighlightConfig.presetColorAmount.ZERO)
 		{
@@ -668,10 +669,9 @@ public class BetterNpcHighlightPlugin extends Plugin implements KeyListener
 					if (c != null)
 					{
 						int preset = index;
-						client.createMenuEntry(idx--)
+						submenu.createMenuEntry(0)
 							.setOption(ColorUtil.prependColorTag("Preset color " + index, c))
 							.setType(MenuAction.RUNELITE)
-							.setParent(parent)
 							.onClick(e ->
 							{
 								if (npc.getName() != null)
@@ -689,10 +689,9 @@ public class BetterNpcHighlightPlugin extends Plugin implements KeyListener
 		{
 			if (n.getNpc() == npc)
 			{
-				client.createMenuEntry(idx--)
+				submenu.createMenuEntry(0)
 					.setOption("Reset color")
 					.setType(MenuAction.RUNELITE)
-					.setParent(parent)
 					.onClick(e ->
 					{
 						if (npc.getName() != null)
